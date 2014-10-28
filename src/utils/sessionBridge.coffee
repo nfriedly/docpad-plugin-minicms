@@ -7,6 +7,7 @@ Function::def = (prop, desc) ->
 class Session
     
     constructor: (@req) ->
+        @req.session ||= {}
 
     @def 'authenticated',
         get: ->
